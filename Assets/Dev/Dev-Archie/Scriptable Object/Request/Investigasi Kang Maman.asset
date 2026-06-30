@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Investigasi Kang Maman
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Pak Kades Wingitwongo
+  requestDescription: Sapi perah andalan saya hilang dari kandang tadi malam. Tidak
+    ada jejak kaki manusia, hanya ada bau anyir darah di pagar. Tolong cari tahu
+    ke mana arah perginya pencuri itu dengan melacak sisa bau darah atau energi gaib
+    yang tertinggal. Masalahnya, maling ini pintar menutup jejak fisik, jadi harus
+    kirim hantu yang ahli menginvestigasi dan punya radar supranatural super peka.
+    Urusan bawa pulang sapinya gampang, yang penting temukan dulu titik koordinatnya.
+  dispatchDuration: 5
+  requirements:
+  - stat: 1
+    requiredValue: 8
+  - stat: 0
+    requiredValue: 6
+  rewardMoney: 100
+  penaltyMoney: 50

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Pak Kades Kehilangan Uang
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Pak Kades Wingitwongo
+  requestDescription: Kas desa di lemari mendadak susut tipis tanpa jejak rusak.
+    Saya curiga ada tengkulak sebelah yang pakai pesugihan botol kosong. Kita tidak
+    butuh perang sihir besar-besaran, cukup kirim seseorang yang bisa menyusup diam-diam
+    dan mengambil kembali fisik uang itu secara rapi. Tapi ingat, hantu itu harus
+    punya indra yang tajam untuk mengendus di mana dukun sebelah menyembunyikan sisa
+    uangnya agar tidak pulang dengan tangan kosong.
+  dispatchDuration: 5
+  requirements:
+  - stat: 4
+    requiredValue: 7
+  - stat: 1
+    requiredValue: 5
+  rewardMoney: 100
+  penaltyMoney: 50

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Kesedihan Ibu Sri
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Ibu Sri
+  requestDescription: Anak perempuan saya mengurung diri di kamar sejak pulang dari
+    hutan bambu. Dia terus menangis, histeris, dan tatapannya kosong. Saya butuh
+    hantu yang punya daya pikat tenang atau keahlian memanipulasi pikiran agar jiwanya
+    yang linglung bisa adem kembali. Selain itu, hantu tersebut harus kebal dari
+    hawa negatif histeria agar tidak ikut-ikutan gila di dalam kamar.
+  dispatchDuration: 5
+  requirements:
+  - stat: 2
+    requiredValue: 7
+  - stat: 3
+    requiredValue: 5
+  rewardMoney: 100
+  penaltyMoney: 50
