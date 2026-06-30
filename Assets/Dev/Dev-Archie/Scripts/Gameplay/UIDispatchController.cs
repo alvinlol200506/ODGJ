@@ -14,6 +14,7 @@ namespace ODGJ.Dispatch
         [SerializeField] private CanvasGroup dispatchCanvas;
         
         [Header("Mission Details UI")]
+        [SerializeField] private TextMeshProUGUI missionAssignerText;
         [SerializeField] private TextMeshProUGUI missionTitleText;
         [SerializeField] private TextMeshProUGUI missionDescText;
         [SerializeField] private TextMeshProUGUI requirementsText;
@@ -52,7 +53,8 @@ namespace ODGJ.Dispatch
             IsOpen = true;
 
             // Update UI Misi
-            missionTitleText.text = request.clientName;
+            missionAssignerText.text = request.clientName;
+            missionTitleText.text = request.name;
             missionDescText.text = request.requestDescription;
             
             string reqStr = "";
@@ -143,7 +145,7 @@ namespace ODGJ.Dispatch
         private void ClosePanel()
         {
             IsOpen = false;
-            
+
             dispatchCanvas.alpha = 0f;
             dispatchCanvas.blocksRaycasts = false;
             dispatchCanvas.interactable = false;

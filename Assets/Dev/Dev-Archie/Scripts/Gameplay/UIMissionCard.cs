@@ -21,7 +21,7 @@ namespace ODGJ.Dispatch
         public void Setup(RequestData request)
         {
             _requestData = request;
-            titleText.text = request.clientName; // Atau requestDescription
+            titleText.text = request.name; // Atau requestDescription
             _timeLeft = lifetime;
 
             missionButton.onClick.AddListener(OnClickMission);

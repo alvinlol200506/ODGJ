@@ -18,7 +18,7 @@ MonoBehaviour:
     hantu yang punya daya pikat tenang atau keahlian memanipulasi pikiran agar jiwanya
     yang linglung bisa adem kembali. Selain itu, hantu tersebut harus kebal dari
     hawa negatif histeria agar tidak ikut-ikutan gila di dalam kamar.
-  dispatchDuration: 5
+  dispatchDuration: 15
   requirements:
   - stat: 2
     requiredValue: 7

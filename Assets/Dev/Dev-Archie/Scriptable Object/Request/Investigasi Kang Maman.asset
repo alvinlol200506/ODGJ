@@ -19,7 +19,7 @@ MonoBehaviour:
     yang tertinggal. Masalahnya, maling ini pintar menutup jejak fisik, jadi harus
     kirim hantu yang ahli menginvestigasi dan punya radar supranatural super peka.
     Urusan bawa pulang sapinya gampang, yang penting temukan dulu titik koordinatnya.
-  dispatchDuration: 5
+  dispatchDuration: 20
   requirements:
   - stat: 1
     requiredValue: 8
