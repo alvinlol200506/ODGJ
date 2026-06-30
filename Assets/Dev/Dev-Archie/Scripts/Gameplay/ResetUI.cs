@@ -3,6 +3,7 @@ using UnityEngine;
 public class ResetUI : MonoBehaviour
 {
     [SerializeField] private CanvasGroup dispatchCanvas;
+    [SerializeField] private CanvasGroup dispatchResultCanvas;
     [SerializeField] private CanvasGroup pauseCanvas;
 
     void Start()
@@ -12,6 +13,10 @@ public class ResetUI : MonoBehaviour
             //reset canvas dispatch
             dispatchCanvas.alpha = 0f;
             dispatchCanvas.blocksRaycasts = false;
+
+            //reset canvas dispatch
+            dispatchResultCanvas.alpha = 0f;
+            dispatchResultCanvas.blocksRaycasts = false;
 
             //reset canvas pause
             pauseCanvas.alpha = 0f;

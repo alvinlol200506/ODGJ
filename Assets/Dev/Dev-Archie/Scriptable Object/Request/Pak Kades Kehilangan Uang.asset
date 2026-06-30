@@ -19,7 +19,7 @@ MonoBehaviour:
     dan mengambil kembali fisik uang itu secara rapi. Tapi ingat, hantu itu harus
     punya indra yang tajam untuk mengendus di mana dukun sebelah menyembunyikan sisa
     uangnya agar tidak pulang dengan tangan kosong.
-  dispatchDuration: 5
+  dispatchDuration: 10
   requirements:
   - stat: 4
     requiredValue: 7
