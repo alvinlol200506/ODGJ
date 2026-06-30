@@ -18,7 +18,7 @@ MonoBehaviour:
     ia bisa menguras isi dompet atau membuat mesin kasir \"bocor\". Meski lemah dalam
     pertarungan langsung, Tuyul adalah andalan untuk misi ekonomi yang membutuhkan
     hasil cepat dan diam-diam."
-  portrait: {fileID: 0}
+  portrait: {fileID: -6057306263155889795, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 2
     sense: 6

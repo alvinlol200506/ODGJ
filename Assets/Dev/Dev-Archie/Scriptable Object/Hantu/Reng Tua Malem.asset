@@ -21,7 +21,7 @@ MonoBehaviour:
     kapan dan kepada siapa bantuan diperlukan. Reng Tua Malem sangat cocok ditugaskan
     sebagai support dalam misi pengobatan atau penguatan sebelum menghadapi kutukan
     berat.
-  portrait: {fileID: 0}
+  portrait: {fileID: -3243647583730400337, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 2
     sense: 7

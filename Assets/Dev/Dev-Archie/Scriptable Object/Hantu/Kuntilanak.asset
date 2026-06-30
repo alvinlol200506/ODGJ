@@ -18,7 +18,7 @@ MonoBehaviour:
     dan tidak segan melumpuhkan siapa pun yang mengganggunya. Kemampuannya yang seimbang
     antara kekuatan magis dan pengaruh membuatnya ideal untuk mengirim kutukan balik
     atau membongkar santet tingkat menengah.
-  portrait: {fileID: 0}
+  portrait: {fileID: -2659898068827783386, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 9
     sense: 3

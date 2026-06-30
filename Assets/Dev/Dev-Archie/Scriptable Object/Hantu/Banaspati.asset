@@ -18,7 +18,7 @@ MonoBehaviour:
     ada tandingannya dalam serangan ofensif. Cocok untuk misi kutukan berat seperti
     membongkar santet maut atau menghancurkan benda-benda terkutuk. Namun ia kurang
     peka dalam deteksi, jadi jangan kirim dia untuk investigasi rumit."
-  portrait: {fileID: 0}
+  portrait: {fileID: -2652479038754888865, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 9
     sense: 2

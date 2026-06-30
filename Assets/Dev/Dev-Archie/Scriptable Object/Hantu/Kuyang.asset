@@ -19,7 +19,7 @@ MonoBehaviour:
     jauh dan mengendus kelemahan target. Meski tidak memiliki daya tahan hebat, kombinasi
     kekuatan magis dan indranya membuatnya ideal untuk misi yang butuh investigasi
     sekaligus aksi."
-  portrait: {fileID: 0}
+  portrait: {fileID: -3262272843640193837, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 7
     sense: 9
