@@ -26,7 +26,7 @@ namespace ODGJ.Dispatch
 
         // --- SISTEM ANTREAN (QUEUE) ---
         private Queue<DispatchReport> _reportQueue = new Queue<DispatchReport>();
-        private bool _isShowing = false; // Flag buat ngecek popup lagi kebuka atau nggak
+        public bool _isShowing = false; // Flag buat ngecek popup lagi kebuka atau nggak
 
         private void Awake()
         {
