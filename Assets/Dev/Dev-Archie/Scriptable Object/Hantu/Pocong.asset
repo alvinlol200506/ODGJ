@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Pocong
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
   ghostName: Pocong
-  description: 
+  description: 'Pocong merupakan arwah yang terperangkap dalam kain kafan, melompat-lompat
+    karena kakinya tidak bisa berjalan. Walaupun terlihat lucu, Pocong dapat menjadi
+    pengganggu yang efektif. Kepraktisannya yang tinggi membuatnya cocok untuk tugas-tugas
+    duniawi seperti mengusir pembeli saingan atau membuat suasana toko terasa "angker"
+    sehingga orang segan berutang.
+
+'
   portrait: {fileID: 0}
   stats:
     magic: 5
