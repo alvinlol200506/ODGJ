@@ -7,6 +7,8 @@ namespace ODGJ.Dispatch
 {
     public class UIResultPopup : MonoBehaviour
     {
+        public static UIResultPopup Instance {get; private set;}
+
         [Header("Canvas & Groups")]
         [SerializeField] private CanvasGroup popupCanvas;
 
@@ -28,6 +30,8 @@ namespace ODGJ.Dispatch
 
         private void Awake()
         {
+            Instance = this;
+
             btnOke.onClick.AddListener(OnOkButtonClicked);
             ClosePopup(); 
         }
@@ -50,7 +54,15 @@ namespace ODGJ.Dispatch
             _reportQueue.Enqueue(report); // Tambahin report ke barisan antrean
             
             // Kalau UI lagi nganggur (gak nampilin apa-apa), langsung panggil data terdepan
-            if (!_isShowing)
+            if (!_isShowing && (UIDispatchController.Instance != null || UIDispatchController.Instance.IsOpen))
+            {
+                DisplayNextReport();
+            }
+        }
+
+        public void TriggerQueue()
+        {
+            if(!_isShowing && _reportQueue.Count > 0)
             {
                 DisplayNextReport();
             }

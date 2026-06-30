@@ -152,6 +152,11 @@ namespace ODGJ.Dispatch
             _currentRequest = null;
             _currentMissionCard = null;
             ClearSelectedGhost();
+
+            if(UIResultPopup.Instance != null)
+            {
+                UIResultPopup.Instance.TriggerQueue();
+            }
         }
     }
 }
