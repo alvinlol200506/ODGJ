@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Banaspati
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
   ghostName: Banaspati
-  description: 
+  description: "Banaspati merupakan jelmaan bola api terbang yang membakar apapun
+    yang disentuhnya. Banaspati adalah hantu dengan kekuatan magis tertinggi\u2014tidak
+    ada tandingannya dalam serangan ofensif. Cocok untuk misi kutukan berat seperti
+    membongkar santet maut atau menghancurkan benda-benda terkutuk. Namun ia kurang
+    peka dalam deteksi, jadi jangan kirim dia untuk investigasi rumit."
   portrait: {fileID: 0}
   stats:
     magic: 9

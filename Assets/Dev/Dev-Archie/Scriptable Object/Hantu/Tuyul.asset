@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Tuyul
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
   ghostName: Tuyul
-  description: 
+  description: "Tuyul adalah hantu kecil botak yang doyan mencuri uang dan benda
+    berharga. Tuyul memiliki kepraktisan luar biasa di dunia nyata\u2014dalam sekejap
+    ia bisa menguras isi dompet atau membuat mesin kasir \"bocor\". Meski lemah dalam
+    pertarungan langsung, Tuyul adalah andalan untuk misi ekonomi yang membutuhkan
+    hasil cepat dan diam-diam."
   portrait: {fileID: 0}
   stats:
     magic: 2

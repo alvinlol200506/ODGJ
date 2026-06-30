@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Kuntilanak
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
   ghostName: Kuntilanak
-  description: 
+  description: Kuntilanak adalah arwah perempuan yang meninggal saat hamil. Ia terkenal
+    dengan tawanya yang nyaring dan suara tangisan bayi. Kuntilanak sangat teritorial
+    dan tidak segan melumpuhkan siapa pun yang mengganggunya. Kemampuannya yang seimbang
+    antara kekuatan magis dan pengaruh membuatnya ideal untuk mengirim kutukan balik
+    atau membongkar santet tingkat menengah.
   portrait: {fileID: 0}
   stats:
     magic: 9

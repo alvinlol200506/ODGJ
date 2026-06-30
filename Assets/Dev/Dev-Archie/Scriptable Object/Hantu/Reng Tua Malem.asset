@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cfae198f414b54d848295678204303, type: 3}
   m_Name: Reng Tua Malem
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
-  ghostName: Kuyang
-  description: 
+  ghostName: Reng Tua Malem
+  description: Reng Tua Malem adalah hantu lelaki tua dari Madura yang suka merokok
+    di malam hari. Ia tidak menyerang atau menakuti, justru dikenal sebagai makhluk
+    bijak yang bisa memberikan "hikmah" kepada siapa pun yang berani mendekatinya.
+    Rokoknya yang mengepul dipercaya dapat meningkatkan keberuntungan, kekuatan,
+    atau ketahanan spiritual bagi yang menerimanya. Dengan Sense yang tajam, ia tahu
+    kapan dan kepada siapa bantuan diperlukan. Reng Tua Malem sangat cocok ditugaskan
+    sebagai support dalam misi pengobatan atau penguatan sebelum menghadapi kutukan
+    berat.
   portrait: {fileID: 0}
   stats:
-    magic: 7
-    sense: 9
-    charisma: 3
-    resilience: 3
-    practicality: 3
+    magic: 2
+    sense: 7
+    charisma: 7
+    resilience: 5
+    practicality: 2

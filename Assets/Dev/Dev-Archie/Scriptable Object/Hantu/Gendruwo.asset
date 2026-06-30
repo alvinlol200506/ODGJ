@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Gendruwo
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
   ghostName: Gendruwo
-  description: 
+  description: "Gendruwo adalah makhluk kekar berambut tebal yang terkenal usil dan
+    suka menggoda. Namun Gendruwo juga bisa menjadi pelindung setia jika diajak kerja
+    sama. Dengan daya pengaruh yang tinggi, ia unggul dalam misi penyamaran\u2014bisa
+    berubah wujud menyerupai orang terdekat target untuk membongkar rahasia atau
+    mempengaruhi keputusan."
   portrait: {fileID: 0}
   stats:
     magic: 4
