@@ -20,7 +20,7 @@ MonoBehaviour:
     sehingga orang segan berutang.
 
 '
-  portrait: {fileID: 0}
+  portrait: {fileID: 1791820967573732112, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
   stats:
     magic: 5
     sense: 5

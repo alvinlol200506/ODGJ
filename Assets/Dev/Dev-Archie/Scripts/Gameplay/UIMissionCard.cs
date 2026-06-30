@@ -13,7 +13,7 @@ namespace ODGJ.Dispatch
 
         [Header("Settings")]
         [Tooltip("Berapa lama misi ini nunggu di UI sebelum hilang (detik)")]
-        [SerializeField] private float lifetime = 15f; 
+        [SerializeField] private float lifetime = 30f; 
 
         private RequestData _requestData;
         private float _timeLeft;
@@ -29,6 +29,9 @@ namespace ODGJ.Dispatch
 
         private void Update()
         {
+            if(UIDispatchController.Instance != null && UIDispatchController.Instance.IsOpen)
+                return;
+
             if (_timeLeft > 0)
             {
                 _timeLeft -= Time.deltaTime;

@@ -57,6 +57,7 @@ namespace ODGJ.Dispatch
                 return;
             }
             _instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         public bool IsGhostBusy(GhostData ghost) => ghost != null && _busyGhosts.Contains(ghost);

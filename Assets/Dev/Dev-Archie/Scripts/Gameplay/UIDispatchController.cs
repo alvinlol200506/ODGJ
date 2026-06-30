@@ -8,6 +8,8 @@ namespace ODGJ.Dispatch
     {
         public static UIDispatchController Instance { get; private set; }
 
+        public bool IsOpen { get; private set; }
+
         [Header("Canvas & Groups")]
         [SerializeField] private CanvasGroup dispatchCanvas;
         
@@ -17,9 +19,11 @@ namespace ODGJ.Dispatch
         [SerializeField] private TextMeshProUGUI requirementsText;
 
         [Header("Ghost Slot UI")]
-        [SerializeField] private GameObject ghostSlotContainer;
+        [Tooltip("Container utama tetep nyala biar frame-nya kelihatan")]
+        [SerializeField] private GameObject ghostSlotContainer; 
         [SerializeField] private Image selectedGhostSprite;
         [SerializeField] private TextMeshProUGUI selectedGhostName;
+        [SerializeField] private TextMeshProUGUI ghostStatText; // Tambahan referensi buat Teks Stat Hantu
         
         [Header("Buttons")]
         [SerializeField] private Button btnClose;
@@ -38,19 +42,19 @@ namespace ODGJ.Dispatch
             btnBatal.onClick.AddListener(ClearSelectedGhost);
             btnSantet.onClick.AddListener(DeploySantet);
             
-            ClosePanel(); // Pastikan ketutup di awal
+            ClosePanel(); // Reset pas game mulai
         }
 
         public void OpenDispatchPanel(UIMissionCard card, RequestData request)
         {
             _currentMissionCard = card;
             _currentRequest = request;
+            IsOpen = true;
 
-            // Update Text UI
+            // Update UI Misi
             missionTitleText.text = request.clientName;
             missionDescText.text = request.requestDescription;
             
-            // Format Requirement Text
             string reqStr = "";
             foreach(var req in request.requirements)
             {
@@ -58,7 +62,8 @@ namespace ODGJ.Dispatch
             }
             requirementsText.text = string.IsNullOrEmpty(reqStr) ? "Tidak ada syarat khusus" : reqStr;
 
-            ClearSelectedGhost(); // Kosongin slot hantu pas baru buka
+            // Kembalikan ke kondisi awal (hantu kosong, tombol hide)
+            ClearSelectedGhost(); 
             
             dispatchCanvas.alpha = 1f;
             dispatchCanvas.blocksRaycasts = true;
@@ -67,13 +72,33 @@ namespace ODGJ.Dispatch
 
         public void SelectGhost(GhostData ghost)
         {
-            if (dispatchCanvas.alpha == 0) return; // Kalau panel gak kebuka, cuekin
+            if (!IsOpen) return;
 
             _currentGhost = ghost;
             
+            // Pastikan containernya nyala (jaga-jaga kalau sempet mati)
             ghostSlotContainer.SetActive(true);
+
+            // Update & Munculin visual hantu
             selectedGhostName.text = ghost.ghostName;
-            if(ghost.portrait != null) selectedGhostSprite.sprite = ghost.portrait;
+            selectedGhostName.gameObject.SetActive(true);
+
+            if(ghost.portrait != null) 
+            {
+                selectedGhostSprite.sprite = ghost.portrait;
+                selectedGhostSprite.gameObject.SetActive(true);
+            }
+
+            // Update & Munculin Text Stat Hantu di tengah
+            if(ghostStatText != null)
+            {
+                ghostStatText.text = $"Magic: {ghost.stats.magic}\n" +
+                                     $"Sense: {ghost.stats.sense}\n" +
+                                     $"Charisma: {ghost.stats.charisma}\n" +
+                                     $"Resilience: {ghost.stats.resilience}\n" +
+                                     $"Practicality: {ghost.stats.practicality}";
+                ghostStatText.gameObject.SetActive(true);
+            }
 
             // Munculin tombol Batal & Santet
             btnBatal.gameObject.SetActive(true);
@@ -83,11 +108,15 @@ namespace ODGJ.Dispatch
         private void ClearSelectedGhost()
         {
             _currentGhost = null;
-            ghostSlotContainer.SetActive(false);
             
-            // Sembunyiin tombol
-            btnBatal.gameObject.SetActive(false);
-            btnSantet.gameObject.SetActive(false);
+            // Jangan matiin ghostSlotContainer biar kotak layoutnya tetep keliatan.
+            // Matiin aja isi-isinya:
+            if(selectedGhostSprite != null) selectedGhostSprite.gameObject.SetActive(false);
+            if(selectedGhostName != null) selectedGhostName.gameObject.SetActive(false);
+            if(ghostStatText != null) ghostStatText.gameObject.SetActive(false);
+            
+            if(btnBatal != null) btnBatal.gameObject.SetActive(false);
+            if(btnSantet != null) btnSantet.gameObject.SetActive(false);
         }
 
         private void DeploySantet()
@@ -97,8 +126,8 @@ namespace ODGJ.Dispatch
                 bool success = DispatchManager.Instance.TryStartDispatch(_currentGhost, _currentRequest);
                 if (success)
                 {
-                    _currentMissionCard.DestroyMission(); // Hapus misi dari UI List
-                    ClosePanel(); // Tutup panel
+                    _currentMissionCard.DestroyMission();
+                    ClosePanel();
                 }
             }
         }
@@ -113,6 +142,8 @@ namespace ODGJ.Dispatch
 
         private void ClosePanel()
         {
+            IsOpen = false;
+            
             dispatchCanvas.alpha = 0f;
             dispatchCanvas.blocksRaycasts = false;
             dispatchCanvas.interactable = false;
