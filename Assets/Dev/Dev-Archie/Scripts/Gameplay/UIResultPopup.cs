@@ -54,7 +54,7 @@ namespace ODGJ.Dispatch
             _reportQueue.Enqueue(report); // Tambahin report ke barisan antrean
             
             // Kalau UI lagi nganggur (gak nampilin apa-apa), langsung panggil data terdepan
-            if (!_isShowing && (UIDispatchController.Instance != null || UIDispatchController.Instance.IsOpen))
+            if (!_isShowing && (UIDispatchController.Instance != null || !UIDispatchController.Instance.IsOpen))
             {
                 DisplayNextReport();
             }
