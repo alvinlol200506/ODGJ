@@ -13,9 +13,6 @@ namespace ODGJ.Dispatch
 
         public int Money { get; private set; }
 
-        // Bikin key konstan buat string di PlayerPrefs biar gak typo
-        private const string GoldPrefsKey = "PlayerGold";
-
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -25,9 +22,9 @@ namespace ODGJ.Dispatch
             }
             Instance = this;
 
-            // SINKRONISASI: Ambil data duit lama dari PlayerPrefs.
+            // SINKRONISASI: Ambil data duit lama lewat SaveSystem (di balik layar tetap PlayerPrefs).
             // Kalau data gak ditemuin (baru pertama kali main), otomatis pakai nilai startingMoney.
-            Money = PlayerPrefs.GetInt(GoldPrefsKey, startingMoney);
+            Money = SaveSystem.LoadMoney(startingMoney);
         }
 
         public void AddMoney(int amount)
@@ -63,11 +60,10 @@ namespace ODGJ.Dispatch
             return Money >= ammount;
         }
 
-        // Fungsi internal buat nge-save data ke local storage perangkat
+        // Fungsi internal buat nge-save data ke local storage perangkat (lewat SaveSystem)
         private void SaveMoneyToPrefs()
         {
-            PlayerPrefs.SetInt(GoldPrefsKey, Money);
-            PlayerPrefs.Save();
+            SaveSystem.SaveMoney(Money);
         }
 
         private void OnEnable()

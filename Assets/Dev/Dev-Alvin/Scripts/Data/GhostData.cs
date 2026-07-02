@@ -11,6 +11,10 @@ namespace ODGJ.Dispatch
     public class GhostData : ScriptableObject
     {
         [Header("Identitas")]
+        [Tooltip("ID unik & STABIL untuk save/load unlock. Jangan diubah setelah dipakai. " +
+                 "Kalau dikosongkan, otomatis pakai ghostName.")]
+        public string ghostId = "";
+
         public string ghostName = "Hantu Baru";
 
         [TextArea(2, 4)]
@@ -28,6 +32,9 @@ namespace ODGJ.Dispatch
             resilience = 5,
             practicality = 5
         };
+
+        /// <summary>ID unik untuk save/load. Fallback ke ghostName kalau ghostId kosong.</summary>
+        public string UniqueId => string.IsNullOrEmpty(ghostId) ? ghostName : ghostId;
 
         /// <summary>Shortcut baca stat tunggal.</summary>
         public int GetStat(GhostStatType type) => stats.Get(type);
