@@ -142,7 +142,7 @@ namespace ODGJ.Dispatch
             }
         }
 
-        private void ClosePanel()
+        public void ClosePanel()
         {
             IsOpen = false;
 
