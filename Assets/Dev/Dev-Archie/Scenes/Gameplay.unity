@@ -5840,12 +5840,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65baf8857252d334cb1ed20f040bbe1c, type: 2}
   - {fileID: 11400000, guid: 6e3833acc19a030458d6166eb7698edd, type: 2}
   - {fileID: 11400000, guid: 0ea7da3c94692884cb21080e32f6988e, type: 2}
+  - {fileID: 11400000, guid: c45c72de941823c49a277d1dc82d81d9, type: 2}
+  - {fileID: 11400000, guid: bbdea1f67b7a2b147b43fad6d58fdb3c, type: 2}
+  - {fileID: 11400000, guid: 4b7955230f6785b45a889754a9c1748b, type: 2}
+  - {fileID: 11400000, guid: 9198af05dda759542b4e9422f8e7821c, type: 2}
   allMissions:
   - {fileID: 11400000, guid: a3b4413b87349244aaa6b157cec33088, type: 2}
   - {fileID: 11400000, guid: 4a43ddd1631bd574b8d2abc784ada8d7, type: 2}
   - {fileID: 11400000, guid: 3064219a5c511ef4e8d747f6ab8ea903, type: 2}
+  - {fileID: 11400000, guid: df18e3c8c123dd741814e4ed84b6c0c2, type: 2}
+  - {fileID: 11400000, guid: 3064219a5c511ef4e8d747f6ab8ea903, type: 2}
+  - {fileID: 11400000, guid: 2f9b4734e324eeb438d63564494f5f9e, type: 2}
+  - {fileID: 11400000, guid: 3cffdcdde7f3a9048841670b626f0c08, type: 2}
+  - {fileID: 11400000, guid: 6ae98e7730c8a8642876b72048c42484, type: 2}
+  - {fileID: 11400000, guid: 58221221ad10ed84b9a5f56913af0a52, type: 2}
+  - {fileID: 11400000, guid: c4ec8b4839ccc484d927ce244952ccdb, type: 2}
+  - {fileID: 11400000, guid: 7577bc150469a58468bacfbe4bcdaaa5, type: 2}
+  - {fileID: 11400000, guid: 49cd506f990756b4bbcd62d2a1fa956c, type: 2}
+  - {fileID: 11400000, guid: 68d12deaa031ce84587c3d69e50b83dd, type: 2}
+  - {fileID: 11400000, guid: 22b1ad3f34396044daffaf08df1f9b67, type: 2}
+  - {fileID: 11400000, guid: ce85961b8cecc384cb613033776270ff, type: 2}
+  - {fileID: 11400000, guid: 73b55906c19e22142a763ddbb3770265, type: 2}
+  - {fileID: 11400000, guid: 7c322ddb1fe388149b1de96481145d95, type: 2}
+  - {fileID: 11400000, guid: ce7212d08a812d840bff4d985fc3ab66, type: 2}
   minSpawnDelay: 3
   maxSpawnDelay: 8
+  maxActiveMissions: 4
 --- !u!4 &1922982913
 Transform:
   m_ObjectHideFlags: 0
