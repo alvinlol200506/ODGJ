@@ -170,6 +170,7 @@ namespace ODGJ.Lobby
             PlayerPrefs.Save();
 
             PlayerWallet.Instance.TrySpend(_currentSelected.unlockPrice);
+            goldTMP.text = PlayerWallet.Instance.Money.ToString();
             Debug.Log($"{_currentSelected.ghostData.ghostName} Berhasil di Unlock!");
 
             // Refresh UI layar
