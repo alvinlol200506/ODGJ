@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dev/Dev-Archie/Scenes/Gameplay.unity
     guid: 767febce3c100ed4fa5e8f3d9f3ead04
+  - enabled: 1
+    path: Assets/Dev/Dev-Archie/Scenes/Padepokan.unity
+    guid: 0fc1c80e469554a4d9212092c8478467
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

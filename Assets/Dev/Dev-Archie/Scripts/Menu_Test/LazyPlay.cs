@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class LazyPlay : MonoBehaviour
 {
-    public void GoToGameplay(String gameplay)
+    public void GoToGameplay(String scene)
     {
-        SceneManager.LoadScene(gameplay);
+        SceneManager.LoadScene(scene);
     }
-
-    public void GoToMainMenu(String menu)
+    
+    public void hapusData()
     {
-        SceneManager.LoadScene(menu);
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Data PlayerPrefs telah dihapus.");
     }
 }
