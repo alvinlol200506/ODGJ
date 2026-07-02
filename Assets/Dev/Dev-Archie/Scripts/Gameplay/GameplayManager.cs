@@ -76,6 +76,8 @@ namespace ODGJ.Gameplay
 
         private void EndGame() {
             IsGameOver = true;
+
+             txtTimer.text = "00:00";
             
             // 1. Paksa tutup Canvas Dispatcher kalau player lagi baca misi
             if (UIDispatchController.Instance != null) {
