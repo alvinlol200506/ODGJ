@@ -30,7 +30,7 @@ namespace ODGJ.Dispatch
 
         public void AddMoney(int amount)
         {
-            if (amount! <= 0)
+            if (amount <= 0)
             {
                 Debug.LogWarning($"[Wallet] Tidak bisa menambahkan jumlah negatif atau nol: {amount}");
             }

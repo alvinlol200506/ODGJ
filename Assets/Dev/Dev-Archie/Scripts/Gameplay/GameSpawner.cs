@@ -26,8 +26,16 @@ namespace ODGJ.Dispatch
         {
             foreach (var ghostData in allGhosts)
             {
-                UIGhostCard newGhost = Instantiate(ghostPrefab, ghostContainer);
-                newGhost.Setup(ghostData);
+                if (PlayerPrefs.GetInt("Unlock_" + ghostData.name, 0) == 1)
+                {
+                    UIGhostCard newGhost = Instantiate(ghostPrefab, ghostContainer);
+                    newGhost.Setup(ghostData);
+                }
+                else
+                {
+                    // Kalau belum terbuka, lewati (jangan di-spawn)
+                    Debug.Log($"[GameSpawner] {ghostData.ghostName} masih terkunci di Padepokan, skip spawn.");
+                }
             }
 
             _availableMissions = new List<RequestData>(allMissions);
@@ -49,9 +57,9 @@ namespace ODGJ.Dispatch
                     {
                         elapsed += Time.deltaTime;
                     }
-                    
+
                     // Tunggu sampe frame berikutnya
-                    yield return null; 
+                    yield return null;
                 }
 
                 // Kalau udah nunggu waktunya, spawn misi random

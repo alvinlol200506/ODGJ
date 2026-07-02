@@ -38,6 +38,11 @@ namespace ODGJ.Lobby
 
         [Header("Stats Panel UI")]
         [SerializeField] private TextMeshProUGUI statsContentText;
+        [SerializeField] private GameObject cueText;
+        [SerializeField] private float cueBlinkInterval = 0.2f;
+        [SerializeField] private float blinkDuration = 1f;
+        
+        private Coroutine _cueBlinkCoroutine;
         
         [Header("Action Button UI (Upgrade / Unlock)")]
         [SerializeField] private Button actionButton;
@@ -60,6 +65,8 @@ namespace ODGJ.Lobby
             {
                 Debug.LogWarning("[PadepokanManager] Gold TMP or PlayerWallet NOT FOUND!");
             }
+
+            cueText.SetActive(false);
 
             // Buka hantu default pas game pertama kali jalan
             if (defaultUnlockedGhost != null) 
@@ -95,6 +102,14 @@ namespace ODGJ.Lobby
 
         public void SelectGhost(GhostLobbyData data)
         {
+            // Stop coroutine blink jika sedang jalan
+            if (_cueBlinkCoroutine != null)
+            {
+                StopCoroutine(_cueBlinkCoroutine);
+                _cueBlinkCoroutine = null;
+            }
+            cueText.SetActive(false);
+            
             _currentSelected = data;
             bool isUnlocked = IsGhostUnlocked(data.ghostData.name);
 
@@ -142,6 +157,12 @@ namespace ODGJ.Lobby
         {
             if (PlayerWallet.Instance.Money < _currentSelected.unlockPrice) {
                 Debug.Log("Duit kurang miskin!");
+                // Cek apakah coroutine udah jalan, kalau belum baru mulai
+                if (_cueBlinkCoroutine == null)
+                {
+                    cueText.SetActive(true);
+                    _cueBlinkCoroutine = StartCoroutine(CueBlinkRoutine());
+                }
                 return; 
             }
             // Simpan status unlock ke memori
@@ -160,6 +181,19 @@ namespace ODGJ.Lobby
         {
             Debug.Log($"Mencoba Upgrade hantu {_currentSelected.ghostData.ghostName}...");
             // TODO: Logic nambahin stat SO hantu ditaruh di sini
+        }
+
+        private System.Collections.IEnumerator CueBlinkRoutine()
+        {
+            float elapsed = 0f;
+            while (elapsed < blinkDuration)
+            {
+                cueText.SetActive(!cueText.activeSelf);
+                yield return new WaitForSeconds(cueBlinkInterval);
+                elapsed += cueBlinkInterval;
+            }
+            cueText.SetActive(false);
+            _cueBlinkCoroutine = null; // Reset coroutine reference setelah selesai
         }
     }
 }
