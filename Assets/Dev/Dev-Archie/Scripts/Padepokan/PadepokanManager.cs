@@ -140,19 +140,15 @@ namespace ODGJ.Lobby
 
         private void UnlockCurrentGhost()
         {
-            // TODO: Nanti tambahin logic ngurangin duit dari PlayerWallet di sini
-            /*
             if (PlayerWallet.Instance.Money < _currentSelected.unlockPrice) {
                 Debug.Log("Duit kurang miskin!");
                 return; 
             }
-            PlayerWallet.Instance.SpendMoney(_currentSelected.unlockPrice);
-            */
-
             // Simpan status unlock ke memori
             PlayerPrefs.SetInt("Unlock_" + _currentSelected.ghostData.name, 1);
             PlayerPrefs.Save();
 
+            PlayerWallet.Instance.TrySpend(_currentSelected.unlockPrice);
             Debug.Log($"{_currentSelected.ghostData.ghostName} Berhasil di Unlock!");
 
             // Refresh UI layar
