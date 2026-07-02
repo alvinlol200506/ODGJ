@@ -4849,6 +4849,7 @@ MonoBehaviour:
   btnOke: {fileID: 1076647511}
   successColor: {r: 0, g: 1, b: 0, a: 1}
   failureColor: {r: 1, g: 0, b: 0, a: 1}
+  _isShowing: 0
 --- !u!1 &1893344928
 GameObject:
   m_ObjectHideFlags: 0
