@@ -119,6 +119,37 @@ namespace ODGJ.Dispatch
 
             GUILayout.Space(8);
             GUILayout.Label($"Dispatch aktif: {DispatchManager.Instance.ActiveDispatchCount}");
+
+            // ---------- Save / Unlock ----------
+            GUILayout.Space(10);
+            GUILayout.Label("<b>SAVE / UNLOCK</b>");
+
+            PlayerWallet wallet = PlayerWallet.Instance;
+            GUILayout.Label(wallet != null
+                ? $"Uang: {wallet.Money}"
+                : "Uang: (taruh PlayerWallet di scene)");
+
+            GhostUnlockManager unlockMgr = GhostUnlockManager.Instance;
+            if (unlockMgr != null && ghosts != null && ghosts.Length > 0)
+            {
+                GhostData g = ghosts[Mathf.Clamp(selectedGhost, 0, ghosts.Length - 1)];
+                string status = unlockMgr.IsUnlocked(g) ? "TERBUKA" : "terkunci";
+                GUILayout.Label($"'{g.ghostName}': {status}  |  Total unlock: {unlockMgr.UnlockedCount}");
+
+                if (GUILayout.Button("Unlock Hantu Terpilih"))
+                    unlockMgr.Unlock(g);
+            }
+            else
+            {
+                GUILayout.Label("(taruh GhostUnlockManager di scene buat tes unlock)");
+            }
+
+            if (GUILayout.Button("RESET SAVE (hapus uang & unlock)"))
+            {
+                SaveSystem.ClearAll();
+                Debug.Log("[Tester] Save di-reset. Play ulang untuk lihat efeknya.");
+            }
+
             GUILayout.EndArea();
         }
     }
