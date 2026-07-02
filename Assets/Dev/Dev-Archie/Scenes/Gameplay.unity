@@ -5840,6 +5840,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65baf8857252d334cb1ed20f040bbe1c, type: 2}
   - {fileID: 11400000, guid: 6e3833acc19a030458d6166eb7698edd, type: 2}
   - {fileID: 11400000, guid: 0ea7da3c94692884cb21080e32f6988e, type: 2}
+  - {fileID: 11400000, guid: c45c72de941823c49a277d1dc82d81d9, type: 2}
+  - {fileID: 11400000, guid: bbdea1f67b7a2b147b43fad6d58fdb3c, type: 2}
+  - {fileID: 11400000, guid: 4b7955230f6785b45a889754a9c1748b, type: 2}
+  - {fileID: 11400000, guid: 9198af05dda759542b4e9422f8e7821c, type: 2}
   allMissions:
   - {fileID: 11400000, guid: a3b4413b87349244aaa6b157cec33088, type: 2}
   - {fileID: 11400000, guid: 4a43ddd1631bd574b8d2abc784ada8d7, type: 2}
@@ -5861,6 +5865,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce7212d08a812d840bff4d985fc3ab66, type: 2}
   minSpawnDelay: 3
   maxSpawnDelay: 8
+  maxActiveMissions: 4
 --- !u!4 &1922982913
 Transform:
   m_ObjectHideFlags: 0
