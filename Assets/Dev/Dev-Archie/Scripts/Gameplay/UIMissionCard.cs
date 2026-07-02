@@ -29,7 +29,7 @@ namespace ODGJ.Dispatch
 
         private void Update()
         {
-            if(UIDispatchController.Instance != null && UIDispatchController.Instance.IsOpen && UIResultPopup.Instance._isShowing)
+            if((UIDispatchController.Instance != null && UIDispatchController.Instance.IsOpen) || UIResultPopup.Instance._isShowing)
                 return;
 
             if (_timeLeft > 0)

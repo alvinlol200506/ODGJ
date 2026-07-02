@@ -8,4 +8,9 @@ public class LazyPlay : MonoBehaviour
     {
         SceneManager.LoadScene(gameplay);
     }
+
+    public void GoToMainMenu(String menu)
+    {
+        SceneManager.LoadScene(menu);
+    }
 }
