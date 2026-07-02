@@ -7,7 +7,7 @@ namespace ODGJ.Dispatch
 {
     public class UIResultPopup : MonoBehaviour
     {
-        public static UIResultPopup Instance {get; private set;}
+        public static UIResultPopup Instance { get; private set; }
 
         [Header("Canvas & Groups")]
         [SerializeField] private CanvasGroup popupCanvas;
@@ -33,7 +33,7 @@ namespace ODGJ.Dispatch
             Instance = this;
 
             btnOke.onClick.AddListener(OnOkButtonClicked);
-            ClosePopup(); 
+            ClosePopup();
         }
 
         private void OnEnable()
@@ -52,7 +52,7 @@ namespace ODGJ.Dispatch
         private void HandleDispatchFinished(DispatchReport report)
         {
             _reportQueue.Enqueue(report); // Tambahin report ke barisan antrean
-            
+
             // Kalau UI lagi nganggur (gak nampilin apa-apa), langsung panggil data terdepan
             if (!_isShowing && (UIDispatchController.Instance == null || !UIDispatchController.Instance.IsOpen))
             {
@@ -62,7 +62,7 @@ namespace ODGJ.Dispatch
 
         public void TriggerQueue()
         {
-            if(!_isShowing && _reportQueue.Count > 0)
+            if (!_isShowing && _reportQueue.Count > 0)
             {
                 DisplayNextReport();
             }
@@ -81,9 +81,9 @@ namespace ODGJ.Dispatch
             }
 
             _isShowing = true;
-            
+
             // Dequeue = Ambil data paling depan, sekaligus buang data itu dari barisan antrean
-            DispatchReport report = _reportQueue.Dequeue(); 
+            DispatchReport report = _reportQueue.Dequeue();
 
             // Update isi teks UI
             if (report.IsSuccess)
@@ -133,6 +133,12 @@ namespace ODGJ.Dispatch
             popupCanvas.alpha = 0f;
             popupCanvas.blocksRaycasts = false;
             popupCanvas.interactable = false;
+        }
+
+        public void ForceClose()
+        {
+            _reportQueue.Clear(); // Hapus sisa antrean report biar ga muncul abis game over
+            ClosePopup();
         }
     }
 }

@@ -46,6 +46,7 @@ namespace ODGJ.Dispatch
         {
             while (_availableMissions.Count > 0)
             {
+                if (ODGJ.Gameplay.GameplayManager.Instance != null && ODGJ.Gameplay.GameplayManager.Instance.IsGameOver) break;
                 float waitTime = Random.Range(minSpawnDelay, maxSpawnDelay);
                 float elapsed = 0f;
 
