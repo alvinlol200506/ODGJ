@@ -27,6 +27,16 @@ namespace ODGJ.Dispatch
         [TextArea(2, 4)]
         public string requestDescription;
 
+        [TextArea(2, 3)]
+        [Tooltip("Kalimat petunjuk/tease dari dukun biar player tahu hantu mana yang cocok berdasarkan stat.")]
+        public string cue; // PARAMETER BARU UTK PETUNJUK STAT
+
+        [Header("Hasil Teks")]
+        [TextArea(2, 3)]
+        public string winText = "Misi berhasil diselesaikan!";
+        [TextArea(2, 3)]
+        public string loseText = "Misi gagal total!";
+
         [Header("Dispatch")]
         [Tooltip("Durasi pengiriman hantu dalam detik (disimulasikan via Coroutine).")]
         [Min(0.1f)]

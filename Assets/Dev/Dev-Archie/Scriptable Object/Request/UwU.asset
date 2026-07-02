@@ -10,19 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
-  m_Name: Kesedihan Ibu Sri
+  m_Name: UwU
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
-  clientName: Ibu Sri
-  requestDescription: 'Anak perempuan saya mengurung diri di kamar sejak pulang dari
-    hutan bambu. Dia terus menangis, histeris, dan tatapannya kosong. '
-  cue: Tenangkan anak ibu Sri dan jangan Sampai terkena efek histeria!
-  winText: Anak Ibu Sri berhasil tenang kembali!
-  loseText: Setan malah ikut sableng, aura min -1000000
-  dispatchDuration: 15
+  clientName: Young Mom
+  requestDescription: duh mbahh, anaku mbahhh, diach mengiess teruskh kalau liat
+    plafonn uhuhu, tolong akuwh mbahh.
+  cue: Kirim yang pinter komunikasi supaya suasananya adem. (Mungkin bisa baku hantam
+    sedikit)
+  winText: Aaaaa mbahhhh, jadi sayaang deh, mwah <3
+  loseText: DUKUN TIDAK PINTAR!  SETANNYA SESAT, KURANG AJAR, DAJJAL, ISTANANNYA
+    MENJADI ISTANA IBLIs(suara abis)
+  dispatchDuration: 7
   requirements:
   - stat: 2
     requiredValue: 7
   - stat: 3
     requiredValue: 5
-  rewardMoney: 100
-  penaltyMoney: 50
+  rewardMoney: 120
+  penaltyMoney: 60

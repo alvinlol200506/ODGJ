@@ -19,7 +19,13 @@ MonoBehaviour:
     dan mengambil kembali fisik uang itu secara rapi. Tapi ingat, hantu itu harus
     punya indra yang tajam untuk mengendus di mana dukun sebelah menyembunyikan sisa
     uangnya agar tidak pulang dengan tangan kosong.
-  dispatchDuration: 10
+  cue: 'Menyelinap ke markas tengkulak!
+
+    Endus dimana tempat disembunyikannya
+    uang!'
+  winText: Uang pak Kades berhasil kembali!
+  loseText: Uangnya pak Kades malah dipake judol
+  dispatchDuration: 15
   requirements:
   - stat: 4
     requiredValue: 7

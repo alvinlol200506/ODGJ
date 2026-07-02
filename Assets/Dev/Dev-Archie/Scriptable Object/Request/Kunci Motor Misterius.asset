@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
-  m_Name: Kesedihan Ibu Sri
+  m_Name: Kunci Motor Misterius
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
-  clientName: Ibu Sri
-  requestDescription: 'Anak perempuan saya mengurung diri di kamar sejak pulang dari
-    hutan bambu. Dia terus menangis, histeris, dan tatapannya kosong. '
-  cue: Tenangkan anak ibu Sri dan jangan Sampai terkena efek histeria!
-  winText: Anak Ibu Sri berhasil tenang kembali!
-  loseText: Setan malah ikut sableng, aura min -1000000
-  dispatchDuration: 15
+  clientName: Mahasiswa Telat
+  requestDescription: Kunci motor hilang, curiga diumpetin Wewe Gombel kos sebelah.
+    Tolong deteksi posisi tepatnya!
+  cue: Gunakan indra keenam tingkat tinggi buat menembus tabir ilusi.
+  winText: Kunci ketemu di dalem panci rice cooker.
+  loseText: Misi gagal toRadarnya rusak, malah nemuin kunci gembok rusak dari tahun
+    jebot
+  dispatchDuration: 6
   requirements:
+  - stat: 1
+    requiredValue: 6
   - stat: 2
-    requiredValue: 7
-  - stat: 3
-    requiredValue: 5
+    requiredValue: 3
   rewardMoney: 100
   penaltyMoney: 50

@@ -16,10 +16,12 @@ MonoBehaviour:
   requestDescription: Sapi perah andalan saya hilang dari kandang tadi malam. Tidak
     ada jejak kaki manusia, hanya ada bau anyir darah di pagar. Tolong cari tahu
     ke mana arah perginya pencuri itu dengan melacak sisa bau darah atau energi gaib
-    yang tertinggal. Masalahnya, maling ini pintar menutup jejak fisik, jadi harus
-    kirim hantu yang ahli menginvestigasi dan punya radar supranatural super peka.
-    Urusan bawa pulang sapinya gampang, yang penting temukan dulu titik koordinatnya.
-  dispatchDuration: 20
+    yang tertinggal. Urusan bawa pulang sapinya gampang, yang penting temukan dulu
+    titik koordinatnya.
+  cue: Butuh hantu yang ahli menginvestigasi dan punya radar supranatural super peka.
+  winText: Cihuyyy lokasi ditemukan!
+  loseText: Setan nyasar ke Tembok Ratapan Oslo!
+  dispatchDuration: 10
   requirements:
   - stat: 1
     requiredValue: 8

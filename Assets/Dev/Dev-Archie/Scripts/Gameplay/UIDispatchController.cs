@@ -57,12 +57,7 @@ namespace ODGJ.Dispatch
             missionTitleText.text = request.name;
             missionDescText.text = request.requestDescription;
             
-            string reqStr = "";
-            foreach(var req in request.requirements)
-            {
-                reqStr += $"{req.stat}: {req.requiredValue}\n";
-            }
-            requirementsText.text = string.IsNullOrEmpty(reqStr) ? "Tidak ada syarat khusus" : reqStr;
+            requirementsText.text = request.cue;
 
             // Kembalikan ke kondisi awal (hantu kosong, tombol hide)
             ClearSelectedGhost(); 

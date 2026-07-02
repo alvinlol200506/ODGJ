@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Horeg Party
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Thomas Alva Edisound
+  requestDescription: Besok ngarak horeg tapi ramalan badai petir. Kirim pengendali
+    cuaca gaib buat mindahin awan mendungnya!
+  cue: Manipulasi cuaca skala besar pakai kekuatan magis dewa.
+  winText: Mendung berpindah ke kabupaten sebelah, auroreg berhasil benderang di
+    langit.
+  loseText: Sihirnya meleset, malah manggil puting beliung dan set horeg beterbangan.
+  dispatchDuration: 5
+  requirements:
+  - stat: 0
+    requiredValue: 10
+  rewardMoney: 250
+  penaltyMoney: 150
