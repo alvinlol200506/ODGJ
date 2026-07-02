@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Icikiwir
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Mas Hog
+  requestDescription: Babi Mas Hog tiba-tiba hilang, cuma ada bau anyir darah. Tolong
+    kirim hantu pelacak karena Mas Hog sangat sedihh!
+  cue: Deteksi lokasi babi dan kembalikan ke Mas Hog
+  winText: Babi Mas Hog dikembalikan! HOGG RID-- (ngawor copyright ini, nanti diganti
+    ya* -dev archie)
+  loseText: Icikiwir tidak kembali dan konon menjadi siluman jadi jadian setengah
+    astrea
+  dispatchDuration: 12
+  requirements:
+  - stat: 1
+    requiredValue: 7
+  - stat: 4
+    requiredValue: 4
+  rewardMoney: 220
+  penaltyMoney: 100

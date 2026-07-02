@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Joki is Wanted
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Artefak Kampus (Konon dia Kating Rektor)
+  requestDescription: Revisi bab 4 gak kelar-kelar. Kirim hantu rajin buat ngetik
+    skripsi saya semalam suntuk!
+  cue: Dewa efisiensi kerja, tipe pekerja keras idaman korporat.
+  winText: Skripsi kelar 100 halaman tanpa typo, dosen pembimbing nangis terharu.
+  loseText: Setannya ngetik pakai bahasa sansekerta, revisi makin numpuk
+  dispatchDuration: 20
+  requirements:
+  - stat: 4
+    requiredValue: 8
+  - stat: 3
+    requiredValue: 7
+  rewardMoney: 100
+  penaltyMoney: 50

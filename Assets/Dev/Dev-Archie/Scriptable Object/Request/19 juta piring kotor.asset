@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: 19 juta piring kotor
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Bu Mega
+  requestDescription: Anak nikahan piring numpuk, harus dibalikin besok. Kirim lelembut
+    gaib super cepat buat cuci piring!
+  cue: Kerja otot instan, sat-set, selesai tanpa banyak drama.
+  winText: 19 juta piring kinclong dalam 5 menit (bukan tahun), otw dua periode order.
+  loseText: Mana 19 juta yang kau janjikan? setan terdeteksi malah buka katering.
+  dispatchDuration: 10
+  requirements:
+  - stat: 3
+    requiredValue: 5
+  - stat: 4
+    requiredValue: 7
+  rewardMoney: 150
+  penaltyMoney: 80

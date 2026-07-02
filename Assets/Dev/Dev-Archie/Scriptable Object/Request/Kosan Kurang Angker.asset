@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: Kosan Kurang Angker
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Freaky Kosan Owner
+  requestDescription: Kosan sebelah lebih laris karena angker. Kirim kutukan magis
+    biar kosan sebelah ketakutan!
+  cue: Keluarkan energi gaib murni untuk bikin kutukan horor.
+  winText: Kosan sebelah dihantui suara nangis tiap jam 2, penghuninya pada pindah.
+  loseText: Kutukannya salah sasaran, kosan sendiri malah makin kelihatan angker
+    dan dijauhi.
+  dispatchDuration: 11
+  requirements:
+  - stat: 0
+    requiredValue: 7
+  - stat: 2
+    requiredValue: 5
+  rewardMoney: 200
+  penaltyMoney: 90

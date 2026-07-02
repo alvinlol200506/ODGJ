@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecb5e2f9f050534eba2b17c7a2024af, type: 3}
+  m_Name: LIka Liku Anak Kos
+  m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.RequestData
+  clientName: Ibu Kost Galak
+  requestDescription: Ibu Kost Galak
+  cue: Gunakan kekuatan mistis hitam berdaya hancur tinggi ke perutnya.
+  winText: Gunakan kekuatan mistis hitam berdaya hancur tinggi ke perutnya.
+  loseText: Sihirnya nyasar, malah Ibu Kos yang bolak-balik WC seharian.
+  dispatchDuration: 15
+  requirements:
+  - stat: 0
+    requiredValue: 8
+  - stat: 1
+    requiredValue: 6
+  - stat: 3
+    requiredValue: 4
+  rewardMoney: 300
+  penaltyMoney: 150
