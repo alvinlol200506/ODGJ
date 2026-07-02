@@ -26,6 +26,9 @@ namespace ODGJ.Lobby
         [SerializeField] private UIGhostIcon iconPrefab;
         [SerializeField] private Transform ghostListContainer;
 
+        [Header("Gold Text UI")]
+        [SerializeField] private TextMeshProUGUI goldTMP;
+
         [Header("Center Panel UI")]
         [SerializeField] private Image centerGhostSprite;
         [SerializeField] private TextMeshProUGUI centerGhostName;
@@ -49,6 +52,15 @@ namespace ODGJ.Lobby
 
         private void Start()
         {
+            if (goldTMP != null && PlayerWallet.Instance != null)
+            {
+                goldTMP.text = PlayerWallet.Instance.Money.ToString();
+            }
+            else
+            {
+                Debug.LogWarning("[PadepokanManager] Gold TMP or PlayerWallet NOT FOUND!");
+            }
+
             // Buka hantu default pas game pertama kali jalan
             if (defaultUnlockedGhost != null) 
             {

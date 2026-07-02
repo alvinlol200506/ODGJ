@@ -10,7 +10,7 @@ namespace ODGJ.Dispatch
     /// </summary>
     public class PlayerWallet : MonoBehaviour
     {
-        public static PlayerWallet Instance {get; private set;}
+        public static PlayerWallet Instance { get; private set; }
 
         [SerializeField] private int startingMoney = 500;
 
@@ -18,7 +18,7 @@ namespace ODGJ.Dispatch
 
         private void Awake()
         {
-            if(Instance != null && Instance != this)
+            if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
                 return;
@@ -26,6 +26,37 @@ namespace ODGJ.Dispatch
             Instance = this;
 
             Money = startingMoney;
+        }
+
+        public void AddMoney(int amount)
+        {
+            if (amount! <= 0)
+            {
+                Debug.LogWarning($"[Wallet] Tidak bisa menambahkan jumlah negatif atau nol: {amount}");
+            }
+            else
+            {
+                Money += amount;
+                Debug.Log($"[Wallet] Menambahkan {amount} koin. Saldo sekarang: {Money}");
+            }
+        }
+
+        public void TrySpend(int ammount)
+        {
+            if (CanSpend(ammount))
+            {
+                Money -= ammount;
+                Debug.Log($"[Wallet] Mengurangi {ammount} koin. Saldo sekarang: {Money}");
+            }
+            else
+            {
+                Debug.LogWarning($"[Wallet] Tidak cukup koin untuk mengurangi {ammount}. Saldo sekarang: {Money}");
+            }
+        }
+
+        private bool CanSpend(int ammount)
+        {
+            return Money >= ammount;
         }
 
         private void OnEnable()
