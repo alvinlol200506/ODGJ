@@ -19,6 +19,9 @@ namespace ODGJ.Dispatch
         [Header("Spawn Settings")]
         [SerializeField] private float minSpawnDelay = 3f;
         [SerializeField] private float maxSpawnDelay = 8f;
+        
+        [Tooltip("Batas maksimal misi yang tampil di layar sekaligus")]
+        [SerializeField] private int maxActiveMissions = 3; // PARAMETER BARU
 
         private List<RequestData> _availableMissions;
 
@@ -33,7 +36,6 @@ namespace ODGJ.Dispatch
                 }
                 else
                 {
-                    // Kalau belum terbuka, lewati (jangan di-spawn)
                     Debug.Log($"[GameSpawner] {ghostData.ghostName} masih terkunci di Padepokan, skip spawn.");
                 }
             }
@@ -47,20 +49,27 @@ namespace ODGJ.Dispatch
             while (_availableMissions.Count > 0)
             {
                 if (ODGJ.Gameplay.GameplayManager.Instance != null && ODGJ.Gameplay.GameplayManager.Instance.IsGameOver) break;
+                
                 float waitTime = Random.Range(minSpawnDelay, maxSpawnDelay);
                 float elapsed = 0f;
 
                 // Loop custom buat timer spawn
                 while (elapsed < waitTime)
                 {
-                    // Timer nunggu misi baru cuma jalan kalau panel dispatch LAGI DITUTUP
-                    if (UIDispatchController.Instance != null && !UIDispatchController.Instance.IsOpen)
+                    // 1. Cek apakah panel dispatch lagi ditutup
+                    bool isPanelClosed = (UIDispatchController.Instance == null || !UIDispatchController.Instance.IsOpen);
+                    
+                    // 2. Cek apakah jumlah misi di layar masih di bawah batas maksimal
+                    bool isUnderLimit = (missionContainer.childCount < maxActiveMissions);
+
+                    // Timer HANYA jalan kalau panel ditutup DAN slot misi masih ada
+                    if (isPanelClosed && isUnderLimit)
                     {
                         elapsed += Time.deltaTime;
                     }
 
                     // Tunggu sampe frame berikutnya
-                    yield return null;
+                    yield return null; 
                 }
 
                 // Kalau udah nunggu waktunya, spawn misi random

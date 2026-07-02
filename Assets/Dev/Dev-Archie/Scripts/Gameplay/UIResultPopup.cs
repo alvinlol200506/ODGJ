@@ -92,7 +92,7 @@ namespace ODGJ.Dispatch
                 txtStatus.color = successColor;
                 txtReward.text = $"+{report.Request.rewardMoney} Koin";
                 txtReward.color = successColor;
-                txtDetails.text = $"{report.Ghost.ghostName} berhasil menyelesaikan keluhan dari {report.Request.clientName}. Pasien auto puas!";
+                txtDetails.text = report.Request.winText;
             }
             else
             {
@@ -100,7 +100,7 @@ namespace ODGJ.Dispatch
                 txtStatus.color = failureColor;
                 txtReward.text = $"-{report.Request.penaltyMoney} Koin";
                 txtReward.color = failureColor;
-                txtDetails.text = $"{report.Ghost.ghostName} blunder! Masalah {report.Request.clientName} malah makin runyam dan bikin geger warga.";
+                txtDetails.text = report.Request.loseText;
             }
 
             // Munculin Canvas
