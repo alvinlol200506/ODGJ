@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cfae198f414b54d848295678204303, type: 3}
   m_Name: Pocong
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
+  ghostId: 
   ghostName: Pocong
   description: 'Pocong merupakan arwah yang terperangkap dalam kain kafan, melompat-lompat
     karena kakinya tidak bisa berjalan. Walaupun terlihat lucu, Pocong dapat menjadi
@@ -20,7 +21,9 @@ MonoBehaviour:
     sehingga orang segan berutang.
 
 '
-  portrait: {fileID: 1791820967573732112, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
+  portrait: {fileID: -6936177343198258020, guid: 48a7d4dc483e2bf4b91d80ff5dac2ce9,
+    type: 3}
+  fullBodySprite: {fileID: 21300000, guid: aaa5db98c3aa2f74aa69574292368e40, type: 3}
   stats:
     magic: 5
     sense: 5

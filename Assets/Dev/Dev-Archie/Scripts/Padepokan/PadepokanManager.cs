@@ -115,7 +115,7 @@ namespace ODGJ.Lobby
 
             // 1. Update Center UI
             centerGhostName.text = data.ghostData.ghostName;
-            centerGhostSprite.sprite = data.ghostData.portrait;
+            centerGhostSprite.sprite = data.ghostData.fullBodySprite;
             
             // 3. Logic percabangan (Udah punya vs Belum punya)
             if (isUnlocked)

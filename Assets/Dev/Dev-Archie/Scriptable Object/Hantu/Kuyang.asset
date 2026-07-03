@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cfae198f414b54d848295678204303, type: 3}
   m_Name: Kuyang
   m_EditorClassIdentifier: Assembly-CSharp::ODGJ.Dispatch.GhostData
+  ghostId: 
   ghostName: Kuyang
   description: "Kuyang adalah kepala perempuan yang bisa terbang lepas bersama organ
     dalamnya, mencari mangsa di malam hari. Kuyang memiliki ketajaman mistis tertinggi
@@ -19,7 +20,9 @@ MonoBehaviour:
     jauh dan mengendus kelemahan target. Meski tidak memiliki daya tahan hebat, kombinasi
     kekuatan magis dan indranya membuatnya ideal untuk misi yang butuh investigasi
     sekaligus aksi."
-  portrait: {fileID: -3262272843640193837, guid: 929cc02141b15954f90a508c47de2ad8, type: 3}
+  portrait: {fileID: 4151872767167952788, guid: 48a7d4dc483e2bf4b91d80ff5dac2ce9,
+    type: 3}
+  fullBodySprite: {fileID: 21300000, guid: 22bbc95805618c14d92a64ee4da200e3, type: 3}
   stats:
     magic: 7
     sense: 9
