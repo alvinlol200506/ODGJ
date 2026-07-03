@@ -18,9 +18,13 @@ namespace ODGJ.Dispatch
         [SerializeField] private AudioSource sfxSource;
 
         [Header("BGM")]
-        [SerializeField] private AudioClip defaultBgm;
+        public AudioClip defaultBgm;
+        public AudioClip gameplayBgm;
+
 
         [Header("SFX Dispatch (dimainkan otomatis via event)")]
+        public AudioClip sfxMissionAppear;
+        public AudioClip buttonClick;
         [SerializeField] private AudioClip sfxDispatchStart;
         [SerializeField] private AudioClip sfxSuccess;
         [SerializeField] private AudioClip sfxFail;

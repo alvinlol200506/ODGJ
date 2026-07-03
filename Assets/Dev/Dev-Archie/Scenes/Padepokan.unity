@@ -1665,6 +1665,7 @@ MonoBehaviour:
   descContentText: {fileID: 114901791}
   statsContentText: {fileID: 1314305149}
   cueText: {fileID: 859957934}
+  cueTMP: {fileID: 859957936}
   cueBlinkInterval: 0.2
   blinkDuration: 1
   actionButton: {fileID: 472485774}

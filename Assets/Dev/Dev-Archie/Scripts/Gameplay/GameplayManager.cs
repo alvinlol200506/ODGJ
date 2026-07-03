@@ -38,6 +38,10 @@ namespace ODGJ.Gameplay
             if(txtNight != null) txtNight.text = currentNight.ToString();
         }
 
+        void Start() {
+            AudioManager.Instance.PlayBGM(AudioManager.Instance.gameplayBgm);
+        }
+
         private void OnEnable() {
             // Numpang dengerin event kalau hantu kelar bertugas
             DispatchEvents.OnDispatchFinished += RecordDispatch;

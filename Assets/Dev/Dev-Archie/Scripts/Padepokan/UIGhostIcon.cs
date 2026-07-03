@@ -28,6 +28,14 @@ namespace ODGJ.Lobby
         private void OnClickIcon()
         {
             _manager.SelectGhost(_data);
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIGhostIcon] AudioManager NOT FOUND!");
+            }
         }
     }
 }
