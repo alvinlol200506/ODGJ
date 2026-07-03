@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "ODGJ PROJECT 1.slnx",
+    "dotnet.defaultSolution": "ODGJ.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }

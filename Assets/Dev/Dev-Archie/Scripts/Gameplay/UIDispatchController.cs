@@ -104,6 +104,14 @@ namespace ODGJ.Dispatch
 
         private void ClearSelectedGhost()
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIDispatchController] AudioManager NOT FOUND!");
+            }
             _currentGhost = null;
             
             // Jangan matiin ghostSlotContainer biar kotak layoutnya tetep keliatan.
@@ -118,6 +126,14 @@ namespace ODGJ.Dispatch
 
         private void DeploySantet()
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIDispatchController] AudioManager NOT FOUND!");
+            }
             if (_currentGhost != null && _currentRequest != null)
             {
                 bool success = DispatchManager.Instance.TryStartDispatch(_currentGhost, _currentRequest);
@@ -139,6 +155,14 @@ namespace ODGJ.Dispatch
 
         public void ClosePanel()
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIDispatchController] AudioManager NOT FOUND!");
+            }
             IsOpen = false;
 
             dispatchCanvas.alpha = 0f;

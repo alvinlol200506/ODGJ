@@ -20,6 +20,7 @@ public class UIMaincanvas : MonoBehaviour
     void Start()
     {
         UpdateGoldUI();
+        AudioManager.Instance.PlayBGM(AudioManager.Instance.defaultBgm);
     }
 
     private void HandledDispatchFinished(DispatchReport report)

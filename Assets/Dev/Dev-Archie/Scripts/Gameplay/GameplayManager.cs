@@ -35,7 +35,11 @@ namespace ODGJ.Gameplay
             
             // Ambil data Hari ke-X dari PlayerPrefs
             int currentNight = PlayerPrefs.GetInt("CurrentNight", 1);
-            if(txtNight != null) txtNight.text = $"Night: {currentNight}";
+            if(txtNight != null) txtNight.text = currentNight.ToString();
+        }
+
+        void Start() {
+            AudioManager.Instance.PlayBGM(AudioManager.Instance.gameplayBgm);
         }
 
         private void OnEnable() {

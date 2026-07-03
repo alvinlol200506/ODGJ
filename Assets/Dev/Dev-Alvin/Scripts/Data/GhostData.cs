@@ -22,6 +22,7 @@ namespace ODGJ.Dispatch
 
         [Tooltip("Diisi tim Art nanti. Boleh dikosongkan untuk core logic.")]
         public Sprite portrait;
+        public Sprite fullBodySprite;
 
         [Header("Stat (skala 1-10)")]
         public GhostStats stats = new GhostStats

@@ -12,34 +12,46 @@ namespace ODGJ.Gameplay
         [SerializeField] private TextMeshProUGUI txtResultDetails; // Buat "Jumlah Pasien Berhasil & Gagal"
         [SerializeField] private TextMeshProUGUI txtTotalGold;     // Buat "Total Pendapatan: XX"
         [SerializeField] private Button btnOke;
-        
+
         [Header("Scene Settings")]
         [SerializeField] private string padepokanSceneName = "Padepokan";
 
-        private void Awake() {
+        private void Awake()
+        {
             btnOke.onClick.AddListener(BackToPadepokan);
             HideCanvas();
         }
 
-        public void ShowResult(int success, int fail, int gold) {
+        public void ShowResult(int success, int fail, int gold)
+        {
             // Format tulisan narik dari data rekapan
             txtResultDetails.text = $"Jumlah Pasien Berhasil: {success}\nJumlah Pasien Gagal: {fail}";
-            
+
             string sign = gold >= 0 ? "+" : "";
             txtTotalGold.text = $"Total Pendapatan: {sign}{gold}";
-            
+
             // Munculin layar endgame
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
             canvasGroup.interactable = true;
         }
-        
-        private void BackToPadepokan() {
+
+        private void BackToPadepokan()
+        {
+            if (ODGJ.Dispatch.AudioManager.Instance != null)
+            {
+                ODGJ.Dispatch.AudioManager.Instance.PlaySFX(ODGJ.Dispatch.AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIEndgameResult] AudioManager NOT FOUND!");
+            }
             // Balik ke lobby
             SceneManager.LoadScene(padepokanSceneName);
         }
 
-        private void HideCanvas() {
+        private void HideCanvas()
+        {
             canvasGroup.alpha = 0f;
             canvasGroup.blocksRaycasts = false;
             canvasGroup.interactable = false;

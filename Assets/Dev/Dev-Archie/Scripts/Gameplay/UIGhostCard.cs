@@ -63,6 +63,14 @@ namespace ODGJ.Dispatch
 
         private void OnClickGhost()
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIGhostCard] AudioManager NOT FOUND!");
+            }
             // Cek dulu apakah hantunya sibuk
             if (DispatchManager.Instance.IsGhostBusy(GhostInfo))
             {

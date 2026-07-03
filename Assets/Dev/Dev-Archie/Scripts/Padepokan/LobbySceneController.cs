@@ -7,6 +7,14 @@ namespace ODGJ.Lobby
     {
         public void MulaiMalamBerikutnya()
         {
+            if (ODGJ.Dispatch.AudioManager.Instance != null)
+            {
+                ODGJ.Dispatch.AudioManager.Instance.PlaySFX(ODGJ.Dispatch.AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[LobbySceneController] AudioManager NOT FOUND!");
+            }
             // Ambil data hari saat ini, tambahin 1, terus disave!
             int currentNight = PlayerPrefs.GetInt("CurrentNight", 0);
             PlayerPrefs.SetInt("CurrentNight", currentNight + 1);
