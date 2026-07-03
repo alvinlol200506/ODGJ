@@ -114,6 +114,14 @@ namespace ODGJ.Dispatch
         /// </summary>
         private void OnOkButtonClicked()
         {
+            if (ODGJ.Dispatch.AudioManager.Instance != null)
+            {
+                ODGJ.Dispatch.AudioManager.Instance.PlaySFX(ODGJ.Dispatch.AudioManager.Instance.buttonClick);
+            }
+            else
+            {
+                Debug.LogWarning("[UIResultPopup] AudioManager NOT FOUND!");
+            }
             // Cek apakah masih ada hantu lain yang juga udah beres ngerjain tugas
             if (_reportQueue.Count > 0)
             {
